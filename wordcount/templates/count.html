@@ -3,6 +3,8 @@
 <h1>Your Text:</h1>
 {{fulltext}}
 
+<a href="{% url 'home' %}">Count Again!</a>
+
 <h1>Word Count:</h1>
 {% for k, v in sorted_words %}
     <p>{{k}}:{{v}}</p>

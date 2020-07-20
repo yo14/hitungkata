@@ -23,3 +23,6 @@ def count(request):
 
     return render(request, 'count.html', {"fulltext":fulltext, "count": len(wordlist), "sorted_words": sorted_words})
 
+
+def whatthis(request):
+    return render(request,"whatthis.html")
