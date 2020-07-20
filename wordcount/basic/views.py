@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'home.html', {"welcome":"Halo selamat datang di Depok"})
+    return render(request, 'home.html')
 
-def eggs(request):
-    return HttpResponse('<h1>I like to eat eggs</h1>')
+def count(request):
+    return render(request, 'count.html')
