@@ -1,6 +1,22 @@
-<h1>What is this</h1>
+{% extends 'base.html' %}
+{% block title%}What this is{% endblock %}
+{% block content %}
+<h1 class="title">
+    What is this ?
+</h1>
+<p class="subtitle">
+    Do you wanna know what <strong>Wordcount</strong> is!
+</p>
+<p>This is an app to count words. To show how many words are being used in text</p>
+<p>And it gives information what is the most popular word being used.</p>
 
-<p>This is an app to count words. And how many a word is being used</p>
-<p>It is just simple app. Maybe any needed</p>
+<br>
 
 <a href="{% url 'home' %}">Wanna Count words!</a>
+{% endblock %}
+
+
+
+
+
+

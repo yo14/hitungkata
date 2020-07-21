@@ -1,11 +1,23 @@
+{% extends 'base.html' %}
+{% block title%}Count result!{% endblock %}
+{% block content %}
 <h1>There are {{count}} words in your text</h1>
 
-<h1>Your Text:</h1>
-{{fulltext}}
+<section class="section">
+  <h1>Your Text:</h1>
+
+    {{fulltext}}
+</section>
+
 
 <a href="{% url 'home' %}">Count Again!</a>
-
-<h1>Word Count:</h1>
-{% for k, v in sorted_words %}
-    <p>{{k}}:{{v}}</p>
-{% endfor %}
+<section class="section">
+  <h1>Word Count:</h1>
+    {% for k, v in sorted_words %}
+    <div class="tags has-addons">
+        <span class="tag">{{k}}</span>
+        <span class="tag is-primary">{{v}}</span>
+    </div>
+    {% endfor %}
+    {% endblock %}
+</section>

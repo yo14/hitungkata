@@ -1,10 +1,22 @@
-<h1>Word Count</h1>
-<br>
+{% extends 'base.html' %}
+{% block title%}WordCount{% endblock %}
+
+{% block content %}
+
 <a href="{% url 'whatthis' %}">What app is this?</a>
 <br><br>
 
 <form action="{% url 'count' %}">
-    <textarea name="fulltext" cols="40" rows="5"></textarea>
+    <p>Put your text here</p>
+
+    <div class="control">
+      <textarea class="textarea" placeholder="Normal textarea" name="fulltext" rows="10"></textarea>
+    </div>
     <br>
-    <input type="submit" value="Count!">
+    <input type="submit" value="Count!" class="button is-primary">
 </form>
+{% endblock %}
+
+
+
+
