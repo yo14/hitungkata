@@ -6,13 +6,14 @@
 <a href="{% url 'whatthis' %}">What app is this?</a>
 <br><br>
 
-<form action="{% url 'count' %}">
+<form action="{% url 'count' %}" method="post">
     <p>Put your text here</p>
 
     <div class="control">
       <textarea class="textarea" placeholder="Normal textarea" name="fulltext" rows="10"></textarea>
     </div>
     <br>
+    {% csrf_token %}
     <input type="submit" value="Count!" class="button is-primary">
 </form>
 {% endblock %}

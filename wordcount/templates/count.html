@@ -1,22 +1,27 @@
 {% extends 'base.html' %}
 {% block title%}Count result!{% endblock %}
 {% block content %}
-<h1>There are {{count}} words in your text</h1>
+
 
 <section class="section">
-  <h1>Your Text:</h1>
-
+    <h1 class="title is-4 is-success" style="text-align:center;color: #00CCCC;">There are {{count}} words in your text</h1>
+    <br>
+    <h5 class="subtitle is-5" style="text-align:center;margin-bottom:8px;color: #00CCCC;">Your Text:</h5>
     {{fulltext}}
 </section>
 
 
-<a href="{% url 'home' %}">Count Again!</a>
+
 <section class="section">
-  <h1>Word Count:</h1>
+    <a href="{% url 'home' %}">Count another text clik here!</a>
+    <h5 class="subtitle is-5" style="text-align:center;color: #00CCCC;">All words base on common used</h5>
+
     {% for k, v in sorted_words %}
+    <div style="display:inline-block; margin-right: 10px;margin-bottom:8px;">
     <div class="tags has-addons">
-        <span class="tag">{{k}}</span>
-        <span class="tag is-primary">{{v}}</span>
+        <span class="tag is-dark">{{k}}</span>
+        <span class="tag is-success">{{v}}</span>
+    </div>
     </div>
     {% endfor %}
     {% endblock %}

@@ -1,5 +1,6 @@
 import operator
 
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -7,7 +8,7 @@ def home(request):
     return render(request, 'home.html')
 
 def count(request):
-    fulltext = request.GET['fulltext']
+    fulltext = request.POST['fulltext'].lower()
     wordlist = fulltext.split()
     worddictionary = {}
 
